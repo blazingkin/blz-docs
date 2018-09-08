@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome to the BLZ Docs site
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+This site hosts documentation for [blz](https://github.com/blazingkin/blz-ospl).
 
-## Commands
+Learn how to [install the language](/installation/).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Look for a specific Package in the menu to find documentation.

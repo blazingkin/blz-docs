@@ -18,12 +18,42 @@ You can update blz by running `blz-update`
 
 `blz -i`
 
-## MacOS and GNU/Linux (UNIX-like)
+## GNU/Linux
 
-### Option 1 (installation script)
+**Option 1 (installation script)**
+
+Use the installation script [here](https://blazingk.in/install_blz_unix.sh)
+
+or by
+
+`curl https://blazingk.in/install_blz_unix.sh | bash` (Always read scripts you download before running them).
+
+**Option 2 (manual)**
+
+1.) Install Java
+
+2.) Clone the blz-ospl project from github
+
+3.) Add the blz-ospl 'bin' folder to your path
+
+`echo 'export PATH=$PATH:INSTALLDIRECTORY/bin' >> ~/.bash_rc`
+
+Where INSTALLDIRECTORY is the directory where you saved blz-ospl
+
+4.) Reload your bash profile
+
+`. ~/.bash_rc`
+
+5.) From the terminal, run
+
+`blz -i`
+
+## MacOS
+
+**Option 1 (installation script)**
 Use the installation script available [here](http://blazingk.in/install_blz.sh). (Always read scripts you download before running them).
 
-### Option 2 (manual)
+**Option 2 (manual)**
 
 1.) Install Java
 
@@ -49,11 +79,11 @@ The blz language is available as a docker image in the [blzlang/blz dockerhub re
 
 If you have docker already installed on your system, it is easy to try out!
 
-#### To run interactive mode
+**To run interactive mode**
 
 1.) `docker run -it blzlang/blz -i`
 
-#### To create a docker image
+**To create a docker image**
 
 1.) Create a dockerfile `FROM blzlang/blz`
 
