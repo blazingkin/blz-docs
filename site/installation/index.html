@@ -64,26 +64,13 @@
     <li class="toctree-l2"><a href="#windows">Windows</a></li>
     
 
-    <li class="toctree-l2"><a href="#macos-and-gnulinux-unix-like">MacOS and GNU/Linux (UNIX-like)</a></li>
+    <li class="toctree-l2"><a href="#gnulinux">GNU/Linux</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l3" href="#option-1-installation-script">Option 1 (installation script)</a></li>
-        
-            <li><a class="toctree-l3" href="#option-2-manual">Option 2 (manual)</a></li>
-        
-        </ul>
+
+    <li class="toctree-l2"><a href="#macos">MacOS</a></li>
     
 
     <li class="toctree-l2"><a href="#docker">Docker</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#to-run-interactive-mode">To run interactive mode</a></li>
-        
-            <li><a class="toctree-l3" href="#to-create-a-docker-image">To create a docker image</a></li>
-        
-        </ul>
     
 
     </ul>
@@ -197,10 +184,25 @@
 <p>4.) Add the bin folder to your PATH</p>
 <p>5.) From the command line, run</p>
 <p><code>blz -i</code></p>
-<h2 id="macos-and-gnulinux-unix-like">MacOS and GNU/Linux (UNIX-like)</h2>
-<h3 id="option-1-installation-script">Option 1 (installation script)</h3>
-<p>Use the installation script available <a href="http://blazingk.in/install_blz.sh">here</a>. (Always read scripts you download before running them).</p>
-<h3 id="option-2-manual">Option 2 (manual)</h3>
+<h2 id="gnulinux">GNU/Linux</h2>
+<p><strong>Option 1 (installation script)</strong></p>
+<p>Use the installation script <a href="https://blazingk.in/install_blz_unix.sh">here</a></p>
+<p>or by</p>
+<p><code>curl https://blazingk.in/install_blz_unix.sh | bash</code> (Always read scripts you download before running them).</p>
+<p><strong>Option 2 (manual)</strong></p>
+<p>1.) Install Java</p>
+<p>2.) Clone the blz-ospl project from github</p>
+<p>3.) Add the blz-ospl 'bin' folder to your path</p>
+<p><code>echo 'export PATH=$PATH:INSTALLDIRECTORY/bin' &gt;&gt; ~/.bash_rc</code></p>
+<p>Where INSTALLDIRECTORY is the directory where you saved blz-ospl</p>
+<p>4.) Reload your bash profile</p>
+<p><code>. ~/.bash_rc</code></p>
+<p>5.) From the terminal, run</p>
+<p><code>blz -i</code></p>
+<h2 id="macos">MacOS</h2>
+<p><strong>Option 1 (installation script)</strong>
+Use the installation script available <a href="http://blazingk.in/install_blz.sh">here</a>. (Always read scripts you download before running them).</p>
+<p><strong>Option 2 (manual)</strong></p>
 <p>1.) Install Java</p>
 <p>2.) Clone the blz-ospl project from github</p>
 <p>3.) Add the blz-ospl 'bin' folder to your path</p>
@@ -213,9 +215,9 @@
 <h2 id="docker">Docker</h2>
 <p>The blz language is available as a docker image in the <a href="https://hub.docker.com/r/blzlang/blz/">blzlang/blz dockerhub repository</a></p>
 <p>If you have docker already installed on your system, it is easy to try out!</p>
-<h4 id="to-run-interactive-mode">To run interactive mode</h4>
+<p><strong>To run interactive mode</strong></p>
 <p>1.) <code>docker run -it blzlang/blz -i</code></p>
-<h4 id="to-create-a-docker-image">To create a docker image</h4>
+<p><strong>To create a docker image</strong></p>
 <p>1.) Create a dockerfile <code>FROM blzlang/blz</code></p>
 <p>2.) Setup dockerfile as normal</p>
 <p>3.) Use <code>RUN blz YourFile.blz</code> or <code>CMD blz YourFile.blz</code></p>
