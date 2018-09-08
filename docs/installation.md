@@ -51,7 +51,7 @@ Where INSTALLDIRECTORY is the directory where you saved blz-ospl
 ## MacOS
 
 **Option 1 (installation script)**
-Use the installation script available [here](http://blazingk.in/install_blz.sh). (Always read scripts you download before running them).
+Use the installation script available [here](http://blazingk.in/install_blz_macos.sh). (Always read scripts you download before running them).
 
 **Option 2 (manual)**
 
