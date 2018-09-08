@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>2 values - BLZ Language Documentation</title>
+  <title>2.) Values - BLZ Language Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2 values";
+    var mkdocs_page_name = "2.) Values";
     var mkdocs_page_input_path = "Learn\\2-values.md";
     var mkdocs_page_url = null;
   </script>
@@ -124,6 +124,33 @@
     </ul>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Learn By Example</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../1-hello-world/">1.) Hello World</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">2.) Values</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#numbers">Numbers</a></li>
+    
+
+    <li class="toctree-l3"><a href="#strings">Strings</a></li>
+    
+
+    <li class="toctree-l3"><a href="#booleans">Booleans</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -145,8 +172,12 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Learn By Example &raquo;</li>
+        
+      
     
-    <li>2 values</li>
+    <li>2.) Values</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -156,11 +187,147 @@
           <div role="main">
             <div class="section">
               
-                
+                <p><strong>Lesson 2: Values</strong></p>
+<p>A core idea in programming languages is <em>values</em>. This is some kind of data that you want to store or manipulate.</p>
+<p>blz has several kinds of built in values:</p>
+<ul>
+<li><strong>Numbers</strong> - integers, decimals, fractions (e.g. <code>1</code>, <code>2</code>, <code>1/2</code>, <code>3.141</code>)</li>
+<li><strong>Strings</strong> - a.k.a. text. Some characters wrapped around quotes (e.g. <code>"Hello World"</code>)</li>
+<li><strong>Booleans</strong> - The answer to a yes / no question. Either <code>true</code> or <code>false</code></li>
+<li><strong>Arrays</strong> - An ordered list. Comma seperated and in square brackets. (e.g. <code>[1, 2, 3]</code>)</li>
+<li><strong>Hash</strong> - Stores a 'value' which is accessed with a 'key'</li>
+<li><strong>Objects</strong> - Used to give names to data</li>
+<li><strong>Resources</strong> - Used for reading / writing to a file or making network requests</li>
+</ul>
+<p>In this section, we will just be learning about Numbers, Strings, and Booleans</p>
+<h3 id="numbers">Numbers</h3>
+<p>There are 3 kinds of numbers:</p>
+<ul>
+<li>Integers - a whole number; 1, 2, 20, -13, etc.</li>
+<li>Doubles - a number with a decimal point; 1.2, -0.21, 3.141592, 1.414</li>
+<li>Fractions - a number with an integer numerator and denominator; 1/2, -2/3, 5/6, etc.</li>
+</ul>
+<p>In most cases, blz treats all numbers equally. Any exceptions should be pointed out explicitly.</p>
+<p>There are several standard operations that you can do with numbers.</p>
+<p>Open up the blz interactive mode by running <code>blz -i</code> to follow along. You can exit at any time by typing <code>exit</code>.</p>
+<p>Numbers can be added (+) or subtracted (-)</p>
+<pre><code>&gt; 2 + 2
+4
+&gt; 2.2 + 3 + 4
+9.2
+&gt; 1/2 + 1/3
+5/6
+&gt; 5/2 - 1
+3/2
+&gt; 2 - 5
+-3
+</code></pre>
+
+<p>Numbers can be multiplied (*) or divided (/)</p>
+<pre><code>&gt; 2 * 4
+8
+&gt; 0.1 * 10
+1.0
+&gt; 1/10 * 10
+1
+&gt; (1/10) / 10
+1/100
+</code></pre>
+
+<p><em>Note - You can use parenthesis () to group the order of expressions</em></p>
+<p>You can use exponentiation (**) or logarithms (__ <em>two underscores</em>)</p>
+<pre><code>&gt; 2 ** 3
+8
+&gt; 2 ** 0.5
+1.414213562373133720883631
+&gt; 100 __ 10
+2.000000000000039
+&gt; 50 __ {e}
+3.9120230054281
+</code></pre>
+
+<p><em>Note - {e} is a shortcut for the base of the natural logarithm. It is about 2.718</em></p>
+<p>You can compare numbers using less than (&lt;), greater than (&gt;), less than or equal (&lt;=), greater than or equal (&gt;=), or equals (==)</p>
+<pre><code>&gt; 2 + 2 &lt; 4
+false
+&gt; 2 + 2 &lt;= 4
+true
+&gt; 2 * 4 &gt; 3
+true
+&gt; 2 * 4 &gt;= 200
+false
+&gt; 2 * 4 == 4 * 2
+true
+</code></pre>
+
+<h3 id="strings">Strings</h3>
+<p>Strings are a list of characters, one after another.</p>
+<p>They are denoted by putting double quotes (<code>"</code>) around some text.</p>
+<p>Use the interactive mode (<code>blz -i</code>) to follow along.</p>
+<p>You can declare some strings</p>
+<pre><code>&gt; &quot;Hello!&quot;
+Hello!
+&gt; &quot;Test 1, 2, 3&quot;
+Test 1, 2, 3
+&gt; &quot;A new line can be added using \n See?&quot;
+A new line can be added using
+ See?
+</code></pre>
+
+<p><em>Note, the <code>\</code> character lets you put in special characters. <code>\n</code> is the most common</em></p>
+<p>Strings can be added</p>
+<pre><code>&gt; &quot;Strings &quot; + &quot;together&quot;
+Strings together
+&gt; &quot;I &quot; + &quot;can &quot; + &quot;add &quot;+ &quot;multiple &quot; + &quot;strings!&quot;
+I can add multiple strings!
+</code></pre>
+
+<p>You can see what character is at a particular <em>index</em> of a string by using the array lookup (<code>[]</code>) operator</p>
+<pre><code>&gt; &quot;Test&quot;[0]
+T
+&gt; &quot;Test&quot;[1]
+e
+&gt; &quot;Test&quot;[2]
+s
+&gt; &quot;Test&quot;[3]
+t
+&gt; &quot;Test&quot;[4]
+Error occurred on line 1
+Out Of Bounds! Tried to access index 4 of string Test
+There was an issue running your last command
+Type 'err' to see the error
+</code></pre>
+
+<p>Wow! A lot just happened. Let's try to break that down.</p>
+<p><strong>Why did we start at 0?</strong></p>
+<p>All index operations in blz (and most programming languages) count 0 as the first element</p>
+<p><strong>What happened when we tried to access the 4th index (5th character)?</strong></p>
+<p>By accessing the 4th index, we end up reading the 5th character (since 0 is an index). Well, the string "Test" only has 4 characters. So the 4th index is undefined.</p>
+<p>An error happened! So blz tried to give a helpful error message to tell you what went wrong.</p>
+<h3 id="booleans">Booleans</h3>
+<p>Booleans are simply the answer to a yes or no question.</p>
+<p>That is, they are either <code>true</code>, or <code>false</code></p>
+<p>We can perform a <a href="https://en.wikipedia.org/wiki/Logical_conjunction">logical and</a> (&amp;&amp;) or a <a href="https://en.wikipedia.org/wiki/Logical_disjunction">logical or</a> (||)</p>
+<pre><code>&gt; true &amp;&amp; false
+false
+&gt; true &amp;&amp; true
+true
+&gt; false || false
+false
+&gt; true || false
+true
+</code></pre>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../1-hello-world/" class="btn btn-neutral" title="1.) Hello World"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -183,6 +350,8 @@
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+      
+        <span><a href="../1-hello-world/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
