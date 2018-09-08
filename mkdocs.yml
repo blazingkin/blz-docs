@@ -17,24 +17,24 @@ pages:
                 - CSV: Packages/csv.md
                 - Lists: Packages/lists.md
                 - Timer: Packages/timer.md
-        - Learn By Example:
-                - 0.) Setting Up: Learn/0-setup.md
-                - 1.) Hello World: Learn/1-hello-world.md
-                - 2.) Values: Learn/2-values.md
-                - 3.) Variables: Learn/3-variables.md
-                - 4.) If: Learn/4-if.md
-                - 5.) For: Learn/5-for.md
-                - 6.) While: Learn/6-while.md
-                - 7.) Functions: Learn/7-functions.md
-                - 8a.) Constructors: Learn/8a-constructors.md
-                - 8b.) Show: Learn/8b-show.md
-                - 8c.) Comparison Operations: Learn/8c-comparison.md
-                - 9.) The Bang! Operator: Learn/9-bang.md
-                - 10.) Environment Variables: Learn/10-environment.md
-                - 11.) Try-Catch Blocks: Learn/11-try-catch.md
-                - 12.) File Operations: Learn/12-file-ops.md
-                - 13.) Network Calls: Learn/13-network.md
-                - 14.) Async: Learn/14-async.md
-                - 15.) Testing: Learn/15-testing.md
-                - 16.) Advanced Command Line Options: Learn/16-cli-options.md
+        #- Learn By Example:
+        #        - 0.) Setting Up: Learn/0-setup.md
+        #        - 1.) Hello World: Learn/1-hello-world.md
+        #        - 2.) Values: Learn/2-values.md
+        #        - 3.) Variables: Learn/3-variables.md
+        #        - 4.) If: Learn/4-if.md
+        #        - 5.) For: Learn/5-for.md
+        #        - 6.) While: Learn/6-while.md
+        #        - 7.) Functions: Learn/7-functions.md
+        #        - 8a.) Constructors: Learn/8a-constructors.md
+        #        - 8b.) Show: Learn/8b-show.md
+        #        - 8c.) Comparison Operations: Learn/8c-comparison.md
+        #        - 9.) The Bang! Operator: Learn/9-bang.md
+        #        - 10.) Environment Variables: Learn/10-environment.md
+        #        - 11.) Try-Catch Blocks: Learn/11-try-catch.md
+        #        - 12.) File Operations: Learn/12-file-ops.md
+        #        - 13.) Network Calls: Learn/13-network.md
+        #        - 14.) Async: Learn/14-async.md
+        #        - 15.) Testing: Learn/15-testing.md
+        #        - 16.) Advanced Command Line Options: Learn/16-cli-options.md
 theme: readthedocs
