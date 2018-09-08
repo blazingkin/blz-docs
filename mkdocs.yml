@@ -9,6 +9,7 @@ pages:
                 - Numbers: Core/number.md
                 - Strings: Core/string.md
                 - Resources: Core/resource.md
+                - Environment Variables: Core/environment.md
         - Packages: 
                 - Math: Packages/math.md
                 - FileSystem: Packages/filesystem.md
