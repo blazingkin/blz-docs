@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Lists - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Lists";
+    var mkdocs_page_input_path = "Packages\\lists.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Core/generic/">Generic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/array/">Arrays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/number/">Numbers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/string/">Strings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/resource/">Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../math/">Math</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../csv/">CSV</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Lists</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#range">Range</a></li>
+    
+
+    <li class="toctree-l3"><a href="#iterator">Iterator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#iteratorhas_next">Iterator::has_next?</a></li>
+        
+            <li><a class="toctree-l4" href="#iteratornext">Iterator::next</a></li>
+        
+            <li><a class="toctree-l4" href="#iteratorremaining">Iterator::remaining</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#linkedlist">LinkedList</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#linkedlistadd">LinkedList::add</a></li>
+        
+            <li><a class="toctree-l4" href="#linkedlistadd_at_beginning">LinkedList::add_at_beginning</a></li>
+        
+            <li><a class="toctree-l4" href="#linkedlistlength">LinkedList::length</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Packages &raquo;</li>
+        
+      
+    
+    <li>Lists</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This page is updated as of blz v2.6</p>
+<p>The Lists package aims to contain standard List data structures.</p>
+<h2 id="range">Range</h2>
+<p><code>range(end)</code> - Returns an array containing all integers <code>[0, end)</code></p>
+<p><code>range(start, end)</code> - Returns an array containing all integers <code>[start, end)</code></p>
+<p>Example:</p>
+<pre><code>import Lists
+print(range(2))
+print(range(2, 5))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[0, 1]
+[2, 3, 4]
+</code></pre>
+
+<h2 id="iterator">Iterator</h2>
+<p><code>Iterator(array)</code> - Creates an iterator over an array</p>
+<h3 id="iteratorhas_next">Iterator::has_next?</h3>
+<p><code>has_next?()</code> - Returns a boolean if the iterator has a next element</p>
+<p>Example:</p>
+<pre><code>import Lists
+it1 = Iterator([])
+it2 = Iterator([1])
+print(it1.has_next?())
+print(it2.has_next?())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>false
+true
+</code></pre>
+
+<h3 id="iteratornext">Iterator::next</h3>
+<p><code>next()</code> - Returns the next element</p>
+<p>Example:</p>
+<pre><code>import Lists
+it = Iterator([1, 2, 3])
+print(it.next())
+print(it.next())
+print(it.next())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>1
+2
+3
+</code></pre>
+
+<h3 id="iteratorremaining">Iterator::remaining</h3>
+<p><code>remaining()</code> - Returns the remaining part of the list</p>
+<p>Example:</p>
+<pre><code>import Lists
+it = Iterator([1, 2, 3])
+print(it.remaining())
+it.next()
+print(it.remaining())
+it.next()
+print(it.remaining())
+it.next()
+print(it.remaining())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[1, 2, 3]
+[2, 3]
+[3]
+[]
+</code></pre>
+
+<h2 id="linkedlist">LinkedList</h2>
+<p><code>LinkedList(value)</code> - Creates a LinkedList with 1 element (value)</p>
+<p>You can access the first elements value using <code>list.value</code> and the tail of the list using <code>list.next</code></p>
+<h3 id="linkedlistadd">LinkedList::add</h3>
+<p><code>add(value)</code> - Adds the value to the end of the linked list</p>
+<p>Note this is an <code>O(n)</code> operation</p>
+<p>Example:</p>
+<pre><code>import Lists
+list = LinkedList(1)
+print(list)
+list.add(2)
+print(list)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>1
+1, 2
+</code></pre>
+
+<h3 id="linkedlistadd_at_beginning">LinkedList::add_at_beginning</h3>
+<p><code>add_at_beginning(value)</code> - Adds the value to the beginning of a linked list</p>
+<p>Note this is an <code>O(1)</code> operation</p>
+<p><strong>NOTE: This operation does not mutate, you must use reassignmnet</strong></p>
+<p>Example:</p>
+<pre><code>import Lists
+list = LinkedList(1)
+print(list)
+list = list.add_at_beginning(0) # Must use reassignment
+print(list)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>1
+0, 1
+</code></pre>
+
+<h3 id="linkedlistlength">LinkedList::length</h3>
+<p><code>length()</code> - Returns the length of the linked list</p>
+<p>Note this is an <code>O(n)</code> operation</p>
+<p>Example:</p>
+<pre><code>import Lists
+list = LinkedList(1)
+print(list.length())
+list.add(2)
+print(list.length())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>1
+2
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../timer/" class="btn btn-neutral float-right" title="Timer">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../csv/" class="btn btn-neutral" title="CSV"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../csv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../timer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

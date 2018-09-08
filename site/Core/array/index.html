@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Arrays - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Arrays";
+    var mkdocs_page_input_path = "Core\\array.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../generic/">Generic</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Arrays</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#concatenate">Concatenate</a></li>
+    
+
+    <li class="toctree-l3"><a href="#contains">Contains</a></li>
+    
+
+    <li class="toctree-l3"><a href="#copy-array-contents">Copy Array Contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#each">Each</a></li>
+    
+
+    <li class="toctree-l3"><a href="#empty">Empty</a></li>
+    
+
+    <li class="toctree-l3"><a href="#filter">Filter</a></li>
+    
+
+    <li class="toctree-l3"><a href="#fold-left">Fold Left</a></li>
+    
+
+    <li class="toctree-l3"><a href="#fold-right">Fold Right</a></li>
+    
+
+    <li class="toctree-l3"><a href="#length">Length</a></li>
+    
+
+    <li class="toctree-l3"><a href="#map">Map</a></li>
+    
+
+    <li class="toctree-l3"><a href="#nil">Nil?</a></li>
+    
+
+    <li class="toctree-l3"><a href="#remove">Remove</a></li>
+    
+
+    <li class="toctree-l3"><a href="#reverse-array-order">Reverse Array Order</a></li>
+    
+
+    <li class="toctree-l3"><a href="#sample-from-array">Sample From Array</a></li>
+    
+
+    <li class="toctree-l3"><a href="#show">Show</a></li>
+    
+
+    <li class="toctree-l3"><a href="#shuffle-array-contents">Shuffle Array Contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#size">Size</a></li>
+    
+
+    <li class="toctree-l3"><a href="#slice">Slice</a></li>
+    
+
+    <li class="toctree-l3"><a href="#sort-by-ascending-order">Sort by Ascending Order</a></li>
+    
+
+    <li class="toctree-l3"><a href="#to-string">To String</a></li>
+    
+
+    <li class="toctree-l3"><a href="#to-json">To JSON</a></li>
+    
+
+    <li class="toctree-l3"><a href="#unique">Unique</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../number/">Numbers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../string/">Strings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resource/">Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Packages/math/">Math</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/csv/">CSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/lists/">Lists</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Core Libarary &raquo;</li>
+        
+      
+    
+    <li>Arrays</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Updated as of blz v2.6</p>
+<p><code>blz-ospl\Packages\Core\ArrayUtil.blz</code></p>
+<h3 id="concatenate">Concatenate</h3>
+<p><code>concatenate(arr)</code> - Returns the resulting concatenation of two arrays.</p>
+<p>Example:</p>
+<pre><code>my_arr_A = [0, 1, 2]
+my_arr_B = [3, 4, 5]
+my_arr_AB = my_arr_A.concatenate(my_arr_B)
+print(&quot;my_arr_AB: &quot; + my_arr_AB)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>my_arr_AB: [0, 1, 2, 3, 4, 5]
+</code></pre>
+
+<h3 id="contains">Contains</h3>
+<p><code>contains?(element)</code> - Returns true if the element is contained in the array and false otherwise.</p>
+<p>Example:</p>
+<pre><code>my_arr = [1, 2]
+print(arr.contains?(1))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>true
+</code></pre>
+
+<h3 id="copy-array-contents">Copy Array Contents</h3>
+<p><code>copy()</code> - Returns a copy of the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2]
+my_arr_copy = my_arr.copy()
+print(my_arr_copy)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[0, 1, 2]
+</code></pre>
+
+<h3 id="each">Each</h3>
+<p><code>each(method)</code> - Takes a method and performs it on each element in the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [&quot;apple&quot;, &quot;peach&quot;, &quot;cherry&quot;]
+my_arr.each(print)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>apple
+peach
+cherry
+</code></pre>
+
+<h3 id="empty">Empty</h3>
+<p><code>empty?()</code> - Returns true if the array is empty.</p>
+<p>Example:</p>
+<pre><code>my_arr = []
+print(my_arr.empty?())
+
+my_arr2 = [1]
+print(my_arr2.empty?())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>true
+false
+</code></pre>
+
+<h3 id="filter">Filter</h3>
+<p><code>filter(method)</code> - Selects the elements of the array that produce <code>true</code> when passed to the method</p>
+<p>Example:</p>
+<pre><code>:is_even?(number)
+    return number % 2 == 0
+end
+
+:main
+   arr = [1,2,3,4,5,6,7]
+   print(arr.filter(is_even?))
+end
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[2, 4, 6]
+</code></pre>
+
+<h3 id="fold-left">Fold Left</h3>
+<p><code>fold_left(accumulator, method)</code> - Collapses the array using the method with the accumulator and elements as parameters, from left to right.</p>
+<p>Example:</p>
+<pre><code>:add(a, b)   #method returns the sum of a and b
+    return a + b
+end
+
+my_arr = [1, 2, 3, 4, 5]
+print(arr.fold_left(0, add))
+
+print(arr.fold_left(5, add))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>15
+20
+</code></pre>
+
+<h3 id="fold-right">Fold Right</h3>
+<p><code>fold_right(accumulator, method)</code> - Collapses the array using the method with the accumulator and elements as parameters, from right to left.</p>
+<p>Example:</p>
+<pre><code>:add(a, b)     #method returns the sum of a and b
+    return a + b
+end
+
+arr = [1, 2, 3, 4, 5]
+print(arr.fold_right(0, add))
+
+print(arr.fold_right(5, add))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>15
+20
+</code></pre>
+
+<h3 id="length">Length</h3>
+<p><code>length()</code> - Returns the length of the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3]
+len = my_arr.length()
+print(&quot;my_arr length: &quot; + len)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>my_arr length: 4
+</code></pre>
+
+<h3 id="map">Map</h3>
+<p><code>map(method)</code> - Calls method on each element in the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [&quot;apple&quot;, &quot;peach&quot;, &quot;cherry&quot;]
+my_arr.map(print)
+
+my_arr.map!(sort)
+print(my_arr)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>apple
+peach
+cherry
+[aelpp, acehp, cehrry]
+</code></pre>
+
+<h3 id="nil">Nil?</h3>
+<p><code>nil?()</code> - Is this array nil? (spoilers no)</p>
+<p>Example:</p>
+<pre><code>print([1].nil?())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>false
+</code></pre>
+
+<h3 id="remove">Remove</h3>
+<p><code>remove(index)</code> - Removes the element at the index from the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3, 4, 5, 6]
+print(&quot;before remove: &quot; + arr)
+my_arr.remove!(3)
+print(&quot;after removing index 3: &quot; + my_arr)
+my_arr.remove!(5)
+print(&quot;after removing index 5: &quot; + my_arr)
+my_arr.remove!(0)
+print(&quot;after removing index 0: &quot; + my_arr)
+arr2 = my_arr.remove(1)
+print(&quot;arr2 makes a copy of my_arr and removes index 1: &quot; + arr2)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>before remove: [0, 1, 2, 3, 4, 5, 6]
+after removing index 3: [0, 1, 2, 4, 5, 6]
+after removing index 5: [0, 1, 2, 4, 5]
+after removing index 0: [1, 2, 4, 5]
+arr2 makes a copy of my_arr and removes index 1: [1, 4, 5]
+</code></pre>
+
+<h3 id="reverse-array-order">Reverse Array Order</h3>
+<p><code>reverse()</code> - Reverses the order of elements in the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3]
+my_arr = my_arr.reverse()
+print(my_arr)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[3, 2, 1, 0]
+</code></pre>
+
+<h3 id="sample-from-array">Sample From Array</h3>
+<p><code>sample()</code> - Returns a random entry in the array</p>
+<p>Example:</p>
+<pre><code>arr = [1, 2, 3, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+print(arr.sample())
+print(arr.sample())
+</code></pre>
+
+<p>Sample Output:</p>
+<pre><code>a
+2
+</code></pre>
+
+<h3 id="show">Show</h3>
+<p><code>show()</code> - Returns a string representation of the string</p>
+<p>Example:</p>
+<pre><code>arr = [1, 2, &quot;a&quot;, &quot;b&quot;]
+print(arr.show())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[1, 2, a, b]
+</code></pre>
+
+<h3 id="shuffle-array-contents">Shuffle Array Contents</h3>
+<p><code>shuffle()</code> - Shuffles the contents of the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+my_arr = my_arr.shuffle()
+new_arr = my_arr.shuffle()         # will be my_arr shuffled again.
+print(&quot;my_arr: &quot; + my_arr)
+print(&quot;new_arr: &quot; + new_arr)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>my_arr: [9, 3, 2, 1, 0, 6, 5, 7, 4, 8]
+new_arr: [1, 2, 9, 6, 8, 3, 7, 4, 0, 5]
+</code></pre>
+
+<h3 id="size">Size</h3>
+<p><code>size()</code> - Returns the size of the array.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3]
+len = my_arr.size()
+print(&quot;my_arr length: &quot; + len)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>my_arr length: 4
+</code></pre>
+
+<h3 id="slice">Slice</h3>
+<p><code>slice(start, end)</code> - Returns a slice of the array indexed from <code>start</code> to, but not including, <code>end</code>.</p>
+<p>Example:</p>
+<pre><code>my_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+new_arr_1 = my_arr.slice(4, 8)                     # a sub-array
+new_arr_2 = my_arr.slice(0, array_length(my_arr))  # the entire array
+new_arr_3 = my_arr.slice(0, 0)                     # none of the array
+print(&quot;new_arr_1: &quot; + new_arr_1)
+print(&quot;new_arr_2: &quot; + new_arr_2)
+print(&quot;new_arr_3: &quot; + new_arr_3)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>new_arr_1: [4, 5, 6, 7]
+new_arr_2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+new_arr_3: []
+</code></pre>
+
+<h3 id="sort-by-ascending-order">Sort by Ascending Order</h3>
+<p><code>sort()</code> - Sorts the array in ascending order.</p>
+<p>Example:</p>
+<pre><code>my_arr = [9, 3, 2, 1, 0, 6, 5, 7, 4, 8]
+my_arr = my_arr.sort()
+print(my_arr)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+
+<h3 id="to-string">To String</h3>
+<p><code>to_string()</code> - Return the array as a string.</p>
+<p>Example:</p>
+<pre><code>my_arr = [1, 2, 3, 4]
+print(my_arr.to_string())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[1, 2, 3, 4]    # this is equivalent to the string &quot;[1, 2, 3, 4]&quot;
+</code></pre>
+
+<h3 id="to-json">To JSON</h3>
+<p><code>to_json()</code> - Returns a string that is a JSON representation of the array</p>
+<p>Example:</p>
+<pre><code>arr = [1, 2, &quot;a&quot;, &quot;b&quot;]
+print(arr.to_json())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[1, 2, &quot;a&quot;, &quot;b&quot;]
+</code></pre>
+
+<h3 id="unique">Unique</h3>
+<p><code>unique()</code> - Returns a copy of the array with duplicate elements removed.</p>
+<p>Example:</p>
+<pre><code>my_arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+my_arr = my_arr.unique()
+print(my_arr)
+
+my_arr = [2, 9, 2, 9, 9, 6, 4, 5, 9, 4, 3, 4, 6, 1, 5, 3, 4, 7, 5, 7, 8, 3]
+my_arr = my_arr.unique()
+print(my_arr)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[1, 2, 3, 4]
+[2, 9, 6, 4, 5, 3, 1, 7, 8]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../boolean/" class="btn btn-neutral float-right" title="Booleans">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../generic/" class="btn btn-neutral" title="Generic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../generic/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../boolean/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

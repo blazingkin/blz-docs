@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Math - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Math";
+    var mkdocs_page_input_path = "Packages\\math.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Core/generic/">Generic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/array/">Arrays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/number/">Numbers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/string/">Strings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/resource/">Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Math</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#math-functions">Math Functions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#absolute-value">Absolute Value</a></li>
+        
+            <li><a class="toctree-l4" href="#ceiling">Ceiling</a></li>
+        
+            <li><a class="toctree-l4" href="#sine">Sine</a></li>
+        
+            <li><a class="toctree-l4" href="#cosine">Cosine</a></li>
+        
+            <li><a class="toctree-l4" href="#tangent">Tangent</a></li>
+        
+            <li><a class="toctree-l4" href="#cotangent">Cotangent</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../csv/">CSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../lists/">Lists</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Packages &raquo;</li>
+        
+      
+    
+    <li>Math</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This page is updated as of blz v2.6</p>
+<h1 id="math-functions">Math Functions</h1>
+<p><code>blz-ospl\Packages\Math</code></p>
+<h3 id="absolute-value">Absolute Value</h3>
+<p><code>abs(x)</code> - Returns the absolute value of x.</p>
+<p>Example:</p>
+<pre><code>print(abs(-1))
+print(abs(1))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>1
+1
+</code></pre>
+
+<h3 id="ceiling">Ceiling</h3>
+<p><code>ceil(x)</code> - Returns the most negative value that is greater than or equal to the argument and is equal to a mathematical integer.</p>
+<p>Example:</p>
+<pre><code>print(ceil(20.123))
+print(ceil(20))
+print(ceil(-4))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>21.000
+20
+-4
+</code></pre>
+
+<h3 id="sine">Sine</h3>
+<p><code>sin(x, series_terms=10)</code> - Uses the taylor series to estimate the sine of x</p>
+<p><code>sine(x, series_terms=10)</code> - Alias for sin</p>
+<p>REPL Example:</p>
+<pre><code>&gt; sin({pi})
+-5.2766142900984368597313941528129E-10
+&gt; sin({pi}/2)
+0.99999999999999974410647080493330636301677176084
+</code></pre>
+
+<h3 id="cosine">Cosine</h3>
+<p><code>cos(x, series_terms=10)</code> - Uses the taylor series to estimate the cosine of x</p>
+<p><code>cosine(x, series_terms=10)</code> - Alias for cos</p>
+<p>REPL Example:</p>
+<pre><code>&gt; cos({pi})
+-1.00000257598757145040413463536951038353
+&gt; cos({pi}/2)
+-5.2766142900984368597313941528129E-10
+</code></pre>
+
+<h3 id="tangent">Tangent</h3>
+<p><code>tan(x, series_terms=10)</code> - Uses the taylor series to estimate the tangent of x</p>
+<p><code>tangent(x, series_terms=10)</code> - Alias for tan</p>
+<h3 id="cotangent">Cotangent</h3>
+<p><code>cot(x, series_terms=10)</code> - Uses the taylor series to estimate the cotangent of x</p>
+<p><code>cotangent(x, series_terms=10)</code> - Alias for cot</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../filesystem/" class="btn btn-neutral float-right" title="FileSystem">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Core/resource/" class="btn btn-neutral" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Core/resource/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../filesystem/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Strings - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Strings";
+    var mkdocs_page_input_path = "Core\\string.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../generic/">Generic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../array/">Arrays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../number/">Numbers</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Strings</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#core-string-functions">Core String Functions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#contains">Contains?</a></li>
+        
+            <li><a class="toctree-l4" href="#is-number">Is Number?</a></li>
+        
+            <li><a class="toctree-l4" href="#length">Length</a></li>
+        
+            <li><a class="toctree-l4" href="#nil">Nil?</a></li>
+        
+            <li><a class="toctree-l4" href="#slice">Slice</a></li>
+        
+            <li><a class="toctree-l4" href="#sort">Sort</a></li>
+        
+            <li><a class="toctree-l4" href="#to-array">To Array</a></li>
+        
+            <li><a class="toctree-l4" href="#to-number">To Number</a></li>
+        
+            <li><a class="toctree-l4" href="#to-string">To String</a></li>
+        
+            <li><a class="toctree-l4" href="#trim">Trim</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resource/">Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Packages/math/">Math</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/csv/">CSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/lists/">Lists</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Core Libarary &raquo;</li>
+        
+      
+    
+    <li>Strings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="core-string-functions">Core String Functions</h1>
+<p><code>blz-ospl\Packages\Core\StringUtil.blz</code></p>
+<p>These are some core string functions that are included in the Core package.</p>
+<h3 id="contains">Contains?</h3>
+<p><code>contains?(substring)</code> - Checks if a string contains a substring</p>
+<p>Example:</p>
+<pre><code>string = &quot;hello&quot;
+print(string.contains?(&quot;he&quot;))
+print(string.contains?(&quot;hi&quot;))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>true
+false
+</code></pre>
+
+<h3 id="is-number">Is Number?</h3>
+<p><code>is_number?()</code> - Checks if a string is a number</p>
+<p>Example:</p>
+<pre><code>print(&quot;123&quot;.is_number?())
+print(&quot;123.123&quot;.is_number?())
+print(&quot;hi!&quot;.is_number())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>true
+true
+false
+</code></pre>
+
+<h3 id="length">Length</h3>
+<p><code>length()</code> - Returns the length of a string</p>
+<p>Example:</p>
+<pre><code>print(&quot;&quot;.length())
+print(&quot;asdf&quot;.length())
+print(&quot;four&quot;.length())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>0
+4
+4
+</code></pre>
+
+<h3 id="nil">Nil?</h3>
+<p><code>nil?()</code> - Is this value nil (no it's not)</p>
+<p>Example:</p>
+<pre><code>print(&quot;&quot;.nil?())
+print(&quot;asdf&quot;.nil?())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>false
+false
+</code></pre>
+
+<h3 id="slice">Slice</h3>
+<p><code>slice(start, end)</code> - Slices a string between these indices</p>
+<p>Example:</p>
+<pre><code>print(&quot;abc&quot;.slice(0,0))
+print(&quot;abc&quot;.slice(0,1))
+print(&quot;abc&quot;.slice(0,3))
+</code></pre>
+
+<p>Output:</p>
+<pre><code>
+a
+abc
+</code></pre>
+
+<h3 id="sort">Sort</h3>
+<p><code>sort()</code> - Sorts a string based on unicode order</p>
+<p>Example:</p>
+<pre><code>print(&quot;abc&quot;.sort())
+print(&quot;cab&quot;.sort())
+print(&quot;321abc&quot;.sort())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>abc
+abc
+123abc
+</code></pre>
+
+<h3 id="to-array">To Array</h3>
+<p><code>to_array()</code> - Converts a string to an array of singleton strings</p>
+<p>Example:</p>
+<pre><code>print(&quot;&quot;.to_array())
+print(&quot;abc&quot;.to_array())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>[]
+[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+</code></pre>
+
+<h3 id="to-number">To Number</h3>
+<p><code>to_number()</code> - Converts a string to a number (if it is one). Undefined for non-numbers</p>
+<p>Example:</p>
+<pre><code>print(&quot;123&quot;.to_number())
+print(&quot;008675309&quot;.to_number())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>123
+8675309
+</code></pre>
+
+<h3 id="to-string">To String</h3>
+<p><code>to_string()</code> - Does nothing</p>
+<p>Example:</p>
+<pre><code>print(&quot;This is useless&quot;.to_string())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>This is useless
+</code></pre>
+
+<h3 id="trim">Trim</h3>
+<p><code>trim()</code> - Trims whitespace on the end of the string</p>
+<p>Example:</p>
+<pre><code>print(&quot;    asdf&quot;.trim())
+</code></pre>
+
+<p>Output:</p>
+<pre><code>asdf
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../resource/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../number/" class="btn btn-neutral" title="Numbers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../number/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../resource/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
