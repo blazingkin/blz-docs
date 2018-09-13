@@ -18,10 +18,19 @@ pages:
                 - CSV: Packages/csv.md
                 - Lists: Packages/lists.md
                 - Timer: Packages/timer.md
-        - Learn By Example:
+        - Feature Documentation:
+                - Bang! Operator: Feature/bang.md
+                - Constructors: Feature/constructor.md  
+                - Command Line Options: Feature/command_line_options.md
+                - Try Catch: Feature/try_catch.md
+                - Shebang: Feature/shebang.md
+                - Interactive Mode: Feature/interactive_mode.md
+                - Testing in blz: Feature/testing_in_blz.md
+                - Async: Feature/async.md
+        #- Learn By Example:
         #        - 0.) Setting Up: Learn/0-setup.md
-                - 1.) Hello World: Learn/1-hello-world.md
-                - 2.) Values: Learn/2-values.md
+        #        - 1.) Hello World: Learn/1-hello-world.md
+        #        - 2.) Values: Learn/2-values.md
         #        - 3.) Variables: Learn/3-variables.md
         #        - 4.) If: Learn/4-if.md
         #        - 5.) For: Learn/5-for.md

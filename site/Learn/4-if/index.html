@@ -18,7 +18,7 @@
   <script>
     // Current page data
     var mkdocs_page_name = "4 if";
-    var mkdocs_page_input_path = "Learn\\4-if.md";
+    var mkdocs_page_input_path = "Learn/4-if.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -130,15 +130,39 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Learn By Example</span>
+    <span class="caption-text">Feature Documentation</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../1-hello-world/">1.) Hello World</a>
+    <a class="" href="../../Feature/bang/">Bang! Operator</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../2-values/">2.) Values</a>
+    <a class="" href="../../Feature/constructor/">Constructors</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/command_line_options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/try_catch/">Try Catch</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/shebang/">Shebang</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/interactive_mode/">Interactive Mode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/testing_in_blz/">Testing in blz</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Feature/async/">Async</a>
                 </li>
     </ul>
 	    </li>
@@ -175,7 +199,44 @@
           <div role="main">
             <div class="section">
               
-                
+                <p><strong>Lesson 4: If</strong></p>
+<h3 id="code-blocks">Code Blocks</h3>
+<p>Sometimes, we need to put several statements together in a <em>block</em>.</p>
+<p>This seperates the code into an organized unit.</p>
+<p>We often indent this block to make it easier to read.</p>
+<p>It will look something like this</p>
+<pre><code>BLOCK HEADER
+    BLOCK LINE 1
+    BLOCK LINE 2
+    BLOCK LINE 3
+    ...
+end
+</code></pre>
+
+<p>In blz, you always close blocks with the keyword <code>end</code></p>
+<h3 id="if">If</h3>
+<p>Sometimes you only want to execute code <em>if</em> some condition is true. That is, a boolean value is true.</p>
+<p>Let's try it out. The <code>if</code> line is a block header, so we'll need an end</p>
+<p>Here's a sample program</p>
+<pre><code>if 2 + 2 == 4
+    print(&quot;2 + 2 = 4!&quot;)
+end
+
+if 2 + 2 == 5
+    print(&quot;2 + 2 = 5?&quot;)
+end
+
+if true || false
+    print(&quot;Either true or false was true!&quot;)
+end
+</code></pre>
+
+<p>It's output</p>
+<pre><code>2 + 2 = 4
+Either true or false was true!
+</code></pre>
+
+<p>As you can see, since 2 + 2 != 5, the second block was not executed.</p>
               
             </div>
           </div>

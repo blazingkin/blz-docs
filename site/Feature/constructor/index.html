@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Constructors - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Constructors";
+    var mkdocs_page_input_path = "Feature/constructor.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Core/generic/">Generic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/array/">Arrays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/number/">Numbers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/string/">Strings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/resource/">Resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/environment/">Environment Variables</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Packages/math/">Math</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/csv/">CSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/lists/">Lists</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Feature Documentation</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../bang/">Bang! Operator</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Constructors</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#properties">Properties</a></li>
+    
+
+    <li class="toctree-l3"><a href="#methods">Methods</a></li>
+    
+
+    <li class="toctree-l3"><a href="#constructor-parameters">Constructor Parameters</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../command_line_options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../try_catch/">Try Catch</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../shebang/">Shebang</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../interactive_mode/">Interactive Mode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../testing_in_blz/">Testing in blz</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../async/">Async</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Feature Documentation &raquo;</li>
+        
+      
+    
+    <li>Constructors</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Constructors are part of the blz language as of version 2.5. They are used to initialize objects within the language.</p>
+<p>We will introduce several different parts of a constructor, one at a time.</p>
+<h1 id="properties">Properties</h1>
+<p>A constructor can specify properties of the resulting object</p>
+<p>For example, we can specify a <code>Cup</code> that has a few properties</p>
+<pre><code>constructor Cup
+    color = &quot;red&quot;
+    contents = &quot;coffee&quot;
+end
+</code></pre>
+
+<p>To make a new cup and print it's color, we might do the following.</p>
+<pre><code>coffee_mug = Cup()
+print(coffee_mug.color)
+</code></pre>
+
+<p><em>Note</em> - Once an object has been created, new properties can be added outside of the constructor</p>
+<p>For instance, we can add a weight property to our cup after it has been created.</p>
+<pre><code>coffee_mug = Cup()
+coffee_mug.weight = 2
+print(coffee_mug.weight)
+</code></pre>
+
+<h1 id="methods">Methods</h1>
+<p>Just like properties, a constructor can specify methods that belong to an object.</p>
+<p>For example, we can add a <code>drink</code> method to our <code>Cup</code> constructor.</p>
+<pre><code>constructor Cup
+    color = &quot;red&quot;
+    contents = &quot;coffee&quot;
+
+    :drink
+        contents = &quot;nothing&quot;
+    end
+end
+</code></pre>
+
+<p>Then, we can use this method to modify our object.</p>
+<pre><code>coffee_mug = Cup()
+print(&quot;We start with &quot; + coffee_mug.contents)
+coffee_mug.drink()
+print(&quot;And after drinking, we have &quot; + coffee_mug.contents)
+</code></pre>
+
+<p><em>Note</em> - Sometimes, variable naming can make references ambiguous, for this reason each object contains the field <code>this</code> which is a reference to itself.</p>
+<p>This can be seen in practice here.</p>
+<pre><code>constructor Cup
+    color = &quot;red&quot;
+    contents = &quot;coffee&quot;
+
+    :drink
+        contents = &quot;nothing&quot;
+    end
+
+    :fill(contents)
+        this.contents = contents
+    end
+end
+</code></pre>
+
+<h1 id="constructor-parameters">Constructor Parameters</h1>
+<p>To allow constructors to be dynamic in behavior, parameters may be passed. These parameters will automatically become properties of the object.</p>
+<p>For instance, our first <code>Cup</code> constructor could be made in the following way.</p>
+<pre><code>constructor Cup(color, contents)
+end
+</code></pre>
+
+<p>Now, when we create a new Cup, we can easily set the color and contents.</p>
+<pre><code>coffee_mug = Cup(&quot;red&quot;, &quot;coffee&quot;)
+tea_cup = Cup(&quot;blue&quot;, &quot;tea&quot;)
+print(&quot;The mug is filled with &quot; + coffee_mug.contents)
+print(&quot;The cup is filled with &quot; + tea_cup.contents)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../command_line_options/" class="btn btn-neutral float-right" title="Command Line Options">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bang/" class="btn btn-neutral" title="Bang! Operator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../bang/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../command_line_options/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

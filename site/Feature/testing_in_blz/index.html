@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Testing in blz - BLZ Language Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Testing in blz";
+    var mkdocs_page_input_path = "Feature/testing_in_blz.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BLZ Language Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Core Libarary</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Core/generic/">Generic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/array/">Arrays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/boolean/">Booleans</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/number/">Numbers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/string/">Strings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/resource/">Resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Core/environment/">Environment Variables</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Packages/math/">Math</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/filesystem/">FileSystem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/test/">Test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/json/">JSON</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/csv/">CSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/lists/">Lists</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Packages/timer/">Timer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Feature Documentation</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../bang/">Bang! Operator</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../constructor/">Constructors</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../command_line_options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../try_catch/">Try Catch</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../shebang/">Shebang</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../interactive_mode/">Interactive Mode</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Testing in blz</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#the-test-package">The Test package</a></li>
+    
+
+    <li class="toctree-l3"><a href="#the-test-flag">The -test flag</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../async/">Async</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BLZ Language Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Feature Documentation &raquo;</li>
+        
+      
+    
+    <li>Testing in blz</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>blz has builtin support for writing tests as of version 2.6. This comes in two different forms.</p>
+<ul>
+<li>The Test package</li>
+<li>The -test flag</li>
+</ul>
+<h2 id="the-test-package">The Test package</h2>
+<p>This package can be imported by simply using
+<code>import Test</code></p>
+<p>It uses a 'Domain Specific Testing Language' to make tests readable.</p>
+<p>Currently, all assertions begin with the method <code>expect</code>.</p>
+<p>For example, to assert that 2 + 2 is 4, you might use <code>expect(2 + 2).is(4)</code></p>
+<p>More complete documentation of this package will be available closer to the release of v2.6</p>
+<h2 id="the-test-flag">The -test flag</h2>
+<p>To run blz in 'test' mode, simply run using the <code>-t</code> or <code>-test</code> flag.</p>
+<p>For example, if I want to test 2 files, Math.blz and Net.blz, I'd run <code>blz -t Math.blz Net.blz</code></p>
+<p>This will run every method in these files that starts with <code>test</code>.</p>
+<p>For example, Math.blz might have a method such as the following</p>
+<pre><code>import Test
+:test_two_plus_two()
+    expect(2 + 2).to_be(4)
+end
+</code></pre>
+
+<p>And running blz with the -t flag will run this method automatically because of the way it is named.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../async/" class="btn btn-neutral float-right" title="Async">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../interactive_mode/" class="btn btn-neutral" title="Interactive Mode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../interactive_mode/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../async/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
