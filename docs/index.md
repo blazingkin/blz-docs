@@ -1,4 +1,4 @@
-# Welcome to the blz Docs site
+# Welcome to the blz docs site
 
 blz is a language designed to help developers produce fast, maintainable code by building best practices into the runtime.
 
