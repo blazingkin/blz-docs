@@ -10,13 +10,13 @@ You can update blz by running `blz-update`
 
 2.) Add the Java bin folder to your PATH ([help from oracle](https://www.java.com/en/download/help/path.xml))
 
-3.) Download the blz-ospl project from github
+3.) Download the [blz-ospl project from github](https://github.com/blazingkin/blz-ospl/archive/master.zip)
 
 4.) Add the bin folder to your PATH
 
 5.) From the command line, run
 
-`blz -i`
+`blz -h`
 
 ## GNU/Linux
 
@@ -46,7 +46,7 @@ Where INSTALLDIRECTORY is the directory where you saved blz-ospl
 
 5.) From the terminal, run
 
-`blz -i`
+`blz -h`
 
 ## MacOS
 
@@ -71,7 +71,7 @@ Where INSTALLDIRECTORY is the directory where you saved blz-ospl
 
 5.) From the terminal, run
 
-`blz -i`
+`blz -h`
 
 ## Docker
 
