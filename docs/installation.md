@@ -32,7 +32,7 @@ or by
 
 1.) Install Java
 
-2.) Clone the blz-ospl project from github
+2.) Clone the [blz-ospl project from github](https://github.com/blazingkin/blz-ospl/archive/master.zip)
 
 3.) Add the blz-ospl 'bin' folder to your path
 
@@ -57,7 +57,7 @@ Use the installation script available [here](http://blazingk.in/install_blz_maco
 
 1.) Install Java
 
-2.) Clone the blz-ospl project from github
+2.) Clone the [blz-ospl project from github](https://github.com/blazingkin/blz-ospl/archive/master.zip)
 
 3.) Add the blz-ospl 'bin' folder to your path
 
