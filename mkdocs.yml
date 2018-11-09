@@ -13,6 +13,7 @@ pages:
         - Packages: 
                 - Math: Packages/math.md
                 - FileSystem: Packages/filesystem.md
+                - DataStructures: Packages/datastructures.md
                 - Test: Packages/test.md
                 - JSON: Packages/json.md
                 - CSV: Packages/csv.md
